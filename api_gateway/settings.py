@@ -22,6 +22,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-(1t7=&v)zl)o6+#51wuz+t@d5nxkc0%k(lc6$(r6rjmj8zkrht'
 
+# Other service url
+AUTH_SERVICE = 'http://127.0.0.1:8001'
+IP_SERVICE = 'http://127.0.0.1:8002'
+AUDIT_SERVICE = 'http://127.0.0.1:8003'
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -105,11 +110,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Dhaka'
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
