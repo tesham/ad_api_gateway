@@ -26,6 +26,9 @@ class GatewayApiView(AuthenticatedView):
             url = settings.IP_SERVICE
         elif 'audit' in path:
             url = settings.AUDIT_SERVICE
+        else:
+            raise Exception('Invalid path')
+
         return url + path
 
     def get_forwarded_headers(self, request):
