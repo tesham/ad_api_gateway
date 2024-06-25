@@ -1,4 +1,4 @@
-## Django REST API for User Authentication with PostgreSQL
+## Django REST API Gateway
 This project implements a RESTful API using Django and Django REST Framework (DRF) for routing user request to appropriate microservice 
 
 ## Features
