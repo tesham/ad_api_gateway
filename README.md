@@ -205,8 +205,16 @@ Update the `settings.py` file with your configurations. Ensure you have the `SEC
 - **Audit View:**
 
     ```http
-    GET /api/audit
+    GET /api/audit?ip&module&user&label&start_date&end_date
     ```
+    Query param:
+    ```
+      user : user_name like: admin or admin@gmail.com
+      ip : ip address filter
+      start date, end date : date range
+      module : AUTH/IP
+      label : Login/Logout, Create/Update
+    ```    
 
     Response:
     ```json
