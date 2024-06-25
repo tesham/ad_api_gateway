@@ -63,3 +63,18 @@ class GatewayApiView(AuthenticatedView):
                     message=str(exe)
                 ), status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
+
+    def put(self, request, *args, **kwargs):
+        # Determine the target service URL based on request data
+        target_url = self.get_target_service_url(request)
+        headers = self.get_forwarded_headers(request)
+        try:
+            # Forward the request to the target service
+            response = requests.put(target_url, json=request.data, headers=headers)
+            return Response(response.json(), status=response.status_code)
+        except Exception as exe:
+            return Response(
+                dict(
+                    message=str(exe)
+                ), status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )

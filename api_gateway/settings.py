@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(1t7=&v)zl)o6+#51wuz+t@d5nxkc0%k(lc6$(r6rjmj8zkrht'
 
 # Other service url
-AUTH_SERVICE = 'http://127.0.0.1:8001'
-IP_SERVICE = 'http://127.0.0.1:8002'
-AUDIT_SERVICE = 'http://127.0.0.1:8003'
+AUTH_SERVICE = 'http://host.docker.internal:8001'
+IP_SERVICE = 'http://host.docker.internal:8002'
+AUDIT_SERVICE = 'http://host.docker.internal:8003'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
